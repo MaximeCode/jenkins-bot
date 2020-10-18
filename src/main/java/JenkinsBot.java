@@ -109,9 +109,9 @@ public class JenkinsBot extends TelegramLongPollingBot {
                 try {
                     sendMsg(update, "Показываю инфу о последней завершённой джобе:\n" +
                             "id " + jenkins.getJob(jobName).getLastCompletedBuild().details().getId() + "\n" +
-                            "duration " + jenkins.getJob(jobName).getLastCompletedBuild().details().getDuration() + "\n" +
-                            "result " + jenkins.getJob(jobName).getLastCompletedBuild().details().getResult() + "\n" +
-                            "url " + jenkins.getJob(jobName).getLastCompletedBuild().details().getUrl());
+                            "Длительность " + jenkins.getJob(jobName).getLastCompletedBuild().details().getDuration() + "\n" +
+                            "Результат " + jenkins.getJob(jobName).getLastCompletedBuild().details().getResult() + "\n" +
+                            jenkins.getJob(jobName).getLastCompletedBuild().details().getUrl());
                     System.out.println(jenkins.getJob(jobName).getLastCompletedBuild());
                 } catch (IOException e) {
                     e.printStackTrace();
